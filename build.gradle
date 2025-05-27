@@ -1,0 +1,28 @@
+plugins {
+  id 'org.jetbrains.kotlin.jvm'
+  id 'org.springframework.boot'
+  id 'io.spring.dependency-management'
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+group = projectGroupId
+version = projectVersion
+
+kotlin {
+  jvmToolchain(javaVersion.toInteger())
+}
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'org.springframework.boot:spring-boot-starter-actuator'
+  implementation "io.github.oshai:kotlin-logging-jvm:$kotlinLoggingVersion"
+
+  testImplementation "io.kotest:kotest-runner-junit5:$kotestVersion"
+  implementation "io.kotest.extensions:kotest-extensions-spring:$kotestSpringVersion"
+  testImplementation "io.kotest:kotest-assertions-core:$kotestVersion"
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
