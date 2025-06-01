@@ -9,10 +9,10 @@ import org.springframework.http.HttpHeaders.ACCEPT
 import org.springframework.http.MediaType.APPLICATION_JSON_VALUE
 
 @Configuration
-open class ClientConfig {
+class ClientConfig {
 
   @Bean
-  open fun okhttpClient() = OkHttpClient.Builder()
+  fun okhttpClient() = OkHttpClient.Builder()
     .addInterceptor(DefaultContentTypeInterceptor())
     .build()
 }
@@ -24,6 +24,6 @@ class DefaultContentTypeInterceptor : Interceptor {
         .newBuilder()
         .header(ACCEPT, APPLICATION_JSON_VALUE)
         .build()
-    );
+    )
   }
 }

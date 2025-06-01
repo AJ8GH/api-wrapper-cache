@@ -4,9 +4,14 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
-
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
 weather:
   api:
     url: https://weather.visualcrossing.com
     path: /VisualCrossingWebServices/rest/services/timeline/{city}
     query-string: ?unitGroup=metric&key=${apiKey}&contentType=json
+  cache:
+    ttl-seconds: ${TTL_SECONDS:3600}
