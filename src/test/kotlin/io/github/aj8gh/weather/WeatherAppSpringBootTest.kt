@@ -36,13 +36,16 @@ private const val CITY = "london"
 @Import(TestRedisConfiguration::class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 class WeatherSpringBootTest(
-  @Autowired private val client: OkHttpClient,
-  @Autowired private val objectMapper: ObjectMapper,
-  @Autowired private val cacheManager: CacheManager,
   @Value("\${local.server.port}") private val port: Int,
   @Value("\${weather.api.path}") private val path: String,
   @Value("\${weather.api.query-string}") private val query: String,
 ) {
+  @Autowired
+  lateinit var client: OkHttpClient
+  @Autowired
+  lateinit var objectMapper: ObjectMapper
+  @Autowired
+  lateinit var cacheManager: CacheManager
 
   @AfterEach
   fun tearDown() {

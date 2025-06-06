@@ -54,7 +54,7 @@ class WeatherApiClientSpec : FunSpec({
 
       val actual = subject.getWeather(CITY)
 
-      actual.payload shouldBeEqual pair.first
+      actual.payload shouldBeEqual pair.second
       actual.city shouldBeEqual CITY
       verify { client.newCall(match { it.url.toString() == expectedUrl }) }
     }
