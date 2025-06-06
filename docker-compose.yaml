@@ -23,5 +23,5 @@ services:
       TTL_SECONDS: 3600
     container_name: api
     depends_on:
-      redis-cache:
+      cache:
         condition: service_healthy

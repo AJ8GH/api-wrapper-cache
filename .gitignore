@@ -1,1 +1,10 @@
 secrets.yaml
+out
+build
+target
+.DS_Store
+**/*.iml
+.idea
+.vscode
+.kotlin
+.gradle

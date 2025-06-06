@@ -1,7 +1,0 @@
-spring:
-  data:
-    redis:
-      port: 6666
-weather:
-  api:
-    url: http://localhost:8888
