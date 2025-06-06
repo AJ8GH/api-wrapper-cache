@@ -57,7 +57,7 @@ implementation = [
 ]
 
 runtimeOnly = [
-  'kotlin-reflect'
+  'kotlin-reflect',
 ]
 
 test-implementation = [
