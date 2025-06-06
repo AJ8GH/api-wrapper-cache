@@ -12,6 +12,6 @@ weather:
   api:
     url: https://weather.visualcrossing.com
     path: /VisualCrossingWebServices/rest/services/timeline/{city}
-    query-string: ?unitGroup=metric&key=${apiKey}&contentType=json
+    query-string: ?unitGroup=metric&key=${weather.api.key}&contentType=json
   cache:
     ttl-seconds: ${TTL_SECONDS:3600}

@@ -1,5 +1,7 @@
 # Weather API Wrapper
 
+[![build](https://github.com/AJ8GH/api-wrapper-cache/actions/workflows/build.yaml/badge.svg)](https://github.com/AJ8GH/api-wrapper-cache/actions/workflows/build.yaml)
+
 Rest API written in Kotlin.
 
 Wrapper for existing weather API https://www.visualcrossing.com/weather-api/

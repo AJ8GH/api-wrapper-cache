@@ -5,3 +5,4 @@ spring:
 weather:
   api:
     url: http://localhost:8888
+    key: test-api-key
