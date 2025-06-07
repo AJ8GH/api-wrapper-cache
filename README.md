@@ -1,6 +1,7 @@
 # Weather API Wrapper
 
 [![build](https://github.com/AJ8GH/api-wrapper-cache/actions/workflows/build.yaml/badge.svg)](https://github.com/AJ8GH/api-wrapper-cache/actions/workflows/build.yaml)
+![coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/aj8gh/123515634bcaab172200ad406ee83c06/raw/api-wrapper-cache-coverage-badge.json)
 
 Rest API written in Kotlin.
 

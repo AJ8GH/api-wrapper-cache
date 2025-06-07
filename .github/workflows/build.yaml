@@ -16,3 +16,19 @@ jobs:
             ./*.gradle*
             ./**/gradle-wrapper.properties
       - run: ./gradlew build --no-daemon
+
+      - name: Generate coverage output
+        run: |
+          echo "COVERAGE=$(${{github.workspace}}/gradlew -q printLineCoverage)" >> "$GITHUB_ENV"
+
+      - name: Update dynamic badge gist
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: "${{secrets.GIST_TOKEN}}"
+          gistID: 123515634bcaab172200ad406ee83c06
+          filename: api-wrapper-cache-coverage-badge.json
+          label: coverage
+          message: "${{env.COVERAGE}}%"
+          valColorRange: "${{env.COVERAGE}}"
+          minColorRange: 0
+          maxColorRange: 100
