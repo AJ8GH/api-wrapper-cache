@@ -7,7 +7,7 @@ Rest API written in Kotlin.
 
 Wrapper for existing weather API https://www.visualcrossing.com/weather-api/
 
-Uses Redis to cache responses for each city. (TODO)
+Uses Redis to cache responses for each city.
 
 ## Set up and run
 
@@ -39,15 +39,16 @@ docker compose up
 
 ## Dependencies
 
-> Library and plugin versions defined in `gradle.properties`
+> Library and plugin versions defined in `gradle/libs.versions.toml`
 
 - Kotlin `2.1.21`
 - JDK `21`
 - Gradle `8.14.1`
 - Spring Boot `3.5.0`
-  - spring-boot-starter-web
-  - spring-boot-starter-actuator
-  - spring-boot-starter-test
+    - spring-boot-starter-web
+    - spring-boot-starter-data-redis
+    - spring-boot-starter-actuator
+    - spring-boot-starter-test
 - kotlin-logging-jvm
 - okhttp
 - mockk
@@ -56,3 +57,5 @@ docker compose up
 - kotest-assertions-core
 - kotest-framework-datatest
 - kotlin-wiremock
+- embedded-redis
+- kover
