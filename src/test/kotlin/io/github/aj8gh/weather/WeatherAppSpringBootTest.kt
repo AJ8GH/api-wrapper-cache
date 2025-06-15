@@ -24,6 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT
+import org.springframework.boot.test.web.server.LocalServerPort
 import org.springframework.cache.CacheManager
 import org.springframework.context.annotation.Import
 import org.springframework.http.HttpStatus.OK
@@ -39,7 +40,7 @@ class WeatherSpringBootTest(
   @Autowired private val client: OkHttpClient,
   @Autowired private val objectMapper: ObjectMapper,
   @Autowired private val cacheManager: CacheManager,
-  @Value("\${local.server.port}") private val port: Int,
+  @LocalServerPort private val port: Int,
   @Value("\${weather.api.path}") private val path: String,
   @Value("\${weather.api.query-string}") private val query: String,
 ) {
